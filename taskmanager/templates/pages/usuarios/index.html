@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-sm-4">
+    <span style="font-size: 12pt; color: white;">Filtrar por búsqueda</span>
+    <input ng-model="search.$" class="form-control"/>
+  </div>
+  
+</div>
+  
+<div class="task-container">
+  <div class="tasks-header row">
+    <div class="titulo col-sm-offset-4 col-sm-4 col-xs-offset-2 col-xs-9">Usuarios</div>
+    
+  </div>
+
+  <div class='row'>
+    
+    <div class="usuarios col-sm-12 col-xs-12">
+      <div class="usuario col-sm-3 col-xs-11"
+        ng-repeat="usuario in UsuariosIndex.usuarios | filter: search">
+          <na-elemento-usuario
+            nombre="usuario.nombre"
+            apellido="usuario.apellido"
+            description="usuario.description"
+            edad="usuario.edad"
+            id="usuario._id">
+          </na-elemento-usuario>
+      </div>
+    </div>
+  </div>
+
+</div>
+

@@ -1,0 +1,35 @@
+
+
+<div class="new-task">
+  
+    <p ng-if="createController.errors"> {{tareaEditarCtrl.errors}} </p>
+    <form class="form" ng-submit="tareaEditarCtrl.actualizarTarea()">
+      <fieldsetset class="form-fieldsetset">
+        <label class="form-label" for="title">Title</label>
+        <input class="form-newtask" name="title" ng-model="tareaEditarCtrl.tarea.title" required />
+      </fieldsetset>
+      <fieldsetset class="form-fieldset">
+        <label class="form-label" for="description">Description</label>
+        <textarea class="form-newtask" name="description" ng-model="tareaEditarCtrl.tarea.description" placeholder="A short description of this task" required></textarea>
+      </fieldsetset>
+      <fieldsetset class="form-fieldset">
+        <label class="form-label" for="prioridad">Prioridad</label>
+        <select class="form-newtask" name="prioridad" ng-model="tareaEditarCtrl.tarea.prioridad">
+          <option value="alta">Alta Prioridad</option>
+          <option value="baja">Baja Prioridad</option>
+        </select>
+      </fieldsetset>
+      <fieldsetset class="form-fieldset">
+        <label class="form-label" for="nombre">Autor</label>
+        <input class="form-newtask" name="nombre" ng-model="tareaEditarCtrl.tarea.nombre" required/>
+      </fieldsetset>
+      <fieldsetset class="form-fieldset">
+        <label class="form-label" for="fecha">Fecha</label>
+        <input class="form-newtask" name="fecha" ng-model="tareaEditarCtrl.tarea.fecha" required/>
+      </fieldsetset>
+        <input class="hidden" name="_id" value="{{tareaEditarCtrl.tarea._id}}" required/>
+
+      <button class="btn" type="Submit">Guardar cambios</button>
+    </form>
+  
+</div>

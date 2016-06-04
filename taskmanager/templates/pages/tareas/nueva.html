@@ -1,0 +1,34 @@
+
+
+<div class="new-task">
+  
+    <p ng-if="createController.errors"> {{tareaNuevaCtrl.errors}} </p>
+    <form class="form" ng-submit="tareaNuevaCtrl.guardaNuevaTarea()">
+      <fieldset class="form-fieldset">
+        <label class="form-label" for="title">Title</label>
+        <input class="form-newtask" name="title" ng-model="tareaNuevaCtrl.tarea.title" required/>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <label class="form-label" for="description">Description</label>
+        <textarea class="form-newtask" name="description" ng-model="tareaNuevaCtrl.tarea.description" placeholder="A short description of this task" required></textarea>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <label class="form-label" for="prioridad">Prioridad</label>
+        <select class="form-newtask" name="prioridad" ng-model="tareaNuevaCtrl.tarea.prioridad" required>
+          <option value="alta">Alta Prioridad</option>
+          <option value="baja">Baja Prioridad</option>
+        </select>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <label class="form-label" for="nombre">Autor</label>
+        <input class="form-newtask" name="nombre" ng-model="tareaNuevaCtrl.tarea.nombre" required/>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <label class="form-label" for="fecha">Fecha</label>
+        <input class="form-newtask" name="fecha" ng-model="tareaNuevaCtrl.tarea.fecha" required/>
+      </fieldset>
+
+      <button class="btn" type="Submit">Crear Tarea</button>
+    </form>
+  
+</div>

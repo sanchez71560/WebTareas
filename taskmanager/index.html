@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="TareasApp">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Tareas app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/tareas.css" />
+
+  </head>
+
+  <body>
+    <div class='container-fluid contenedor-total'>
+
+      <!-- BARRA DE NAVEGACIÓN -->
+      <div class="navbar navbar-inverse navbar-static-top">
+        <div class='container'>
+          <div class='navbar-header'>
+            <a href="/#/tareas" class="navbar-brand">Tareas</a>
+              <a href="/#/usuarios" class="navbar-brand">Usuarios</a>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ENCABEZADO -->
+      <div class="encabezado">
+        
+      </div>
+
+
+      <!-- CONTENIDO -->
+      
+      <div ng-view class="panel-total">
+
+        
+      </div>
+      
+      
+
+    </div>
+
+    
+
+    
+
+    <!-- Load Js libs -->
+    <script src="/js/librerias/jquery.js"></script>
+    <script src="/js/librerias/angular.js"></script>
+    <script src="/js/librerias/angular-route.js"></script>
+    
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+    
+    <script src="/js/app.js"></script>
+    <script src="/js/routes.js"></script>
+
+    <!-- Directives -->
+    <script src="/js/directives/na-elemento-tarea.js"></script>
+    <script src="/js/directives/na-elemento-usuario.js"></script>
+
+    <!-- Services -->
+    <script src="/js/services/tarea.js"></script>
+    <script src="/js/services/usuario.js"></script>
+
+    <!-- Resources -->
+    <script src="/js/librerias/angular-resource.js"></script>
+
+    <!-- Controllers -->
+    <script src="/js/controllers/tareas-index-controller.js"></script>
+    <script src="/js/controllers/usuarios-index-controller.js"></script>
+
+    <script src="/js/controllers/tarea-show-controller.js"></script>
+    <script src="/js/controllers/tarea-nueva-controller.js"></script>
+    <script src="/js/controllers/tarea-actualizar-controller.js"></script>
+
+    <!-- Filters -->
+
+  </body>
+</html>
